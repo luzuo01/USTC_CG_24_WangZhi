@@ -1,4 +1,10 @@
+#include <iostream>
+
 #include "DArray.h"
+
+#include <cassert>
+
+using namespace std;
 
 int main(int argc, char** argv) {
 	DArray a;
