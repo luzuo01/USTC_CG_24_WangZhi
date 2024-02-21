@@ -5,6 +5,7 @@
 #include <sstream>
 #include <cassert>
 #include <cmath>
+#define EPSILON 1.0e-13
 
 using namespace std;
 
@@ -40,112 +41,47 @@ double& PolynomialMap::coff(int i) {
 }
 
 void PolynomialMap::compress() {
-	// TODO
+	map<int, double> temp = m_Polynomial;
+    m_Polynomial.clear();
+    for (auto term : temp) {
+        if (fabs(term.second) > EPSILON) {
+            temp[term.first] = term.second; 
+        } 
+    }
+    m_Polynomial = temp;
 }
 
 PolynomialMap PolynomialMap::operator+(const PolynomialMap& right) const {
-	auto it1 = m_Polynomial.begin();
-    auto it2 = right.m_Polynomial.begin();
-    vector<int> deg;
-    vector<double> cof;
-    while (it1 != m_Polynomial.end() && it2 != right.m_Polynomial.end()) {
-        if (it1->first == it2->first) {
-            deg.push_back(it1 -> first);
-            cof.push_back(it1->second + it2->second);
-            ++it1;
-            ++it2;
-        } else if (it1->first > it2->first) {
-            deg.push_back(it2 -> first);
-            cof.push_back(it2-> second);
-            ++it2;
-        } else {
-            deg.push_back(it1 -> first);
-            cof.push_back(it1->second);
-            ++it1;
-        }
+	PolynomialMap temp = right;
+    for (auto it : m_Polynomial)
+    {
+        temp.m_Polynomial[it.first] += it.second;
     }
-
-    while (it1 != m_Polynomial.end()) {
-        deg.push_back(it1 -> first);
-        cof.push_back(it1-> second);
-        ++it1;
-    }
-
-    while (it2 != right.m_Polynomial.end()) {
-        deg.push_back(it2 -> first);
-        cof.push_back(it2->second);
-        ++it2;
-    }
-	PolynomialMap res = PolynomialMap(deg, cof);
-	return res;
+    temp.compress();
+    return temp;
 }
 
 PolynomialMap PolynomialMap::operator-(const PolynomialMap& right) const {
-	auto it1 = m_Polynomial.begin();
-    auto it2 = right.m_Polynomial.begin();
-    vector<int> deg;
-    vector<double> cof;
-    while (it1 != m_Polynomial.end() && it2 != right.m_Polynomial.end()) {
-        if (it1->first == it2->first) {
-            deg.push_back(it1 -> first);
-            cof.push_back(it1->second - it2->second);
-            ++it1;
-            ++it2;
-        } else if (it1->first > it2->first) {
-            deg.push_back(it2 -> first);
-            cof.push_back(- it2-> second);
-            ++it2;
-        } else {
-            deg.push_back(it1 -> first);
-            cof.push_back(it1->second);
-            ++it1;
-        }
+    PolynomialMap temp = *this;
+    for (auto it : right.m_Polynomial)
+    {
+        temp.m_Polynomial[it.first] -= it.second;
     }
-
-    while (it1 != m_Polynomial.end()) {
-        deg.push_back(it1 -> first);
-        cof.push_back(it1-> second);
-        ++it1;
-    }
-
-    while (it2 != right.m_Polynomial.end()) {
-        deg.push_back(it2 -> first);
-        cof.push_back(- it2->second);
-        ++it2;
-    }
-	PolynomialMap res = PolynomialMap(deg, cof);
-	return res;
+    temp.compress();
+    return temp;
 }
-
 PolynomialMap PolynomialMap::operator*(const PolynomialMap& right) const {
-	PolynomialMap presult;
-    vector<int> deg;
-    vector<double> cof;
-
-    for (auto term1 : m_Polynomial) {
-        for (auto term2 : right.m_Polynomial) {
-            int newDegree = term1.first + term2.first;
-            double newCoefficient = term1.second * term2.second;
-
-            bool found = false;
-            for (auto& resultTerm : presult.m_Polynomial) {
-                if (resultTerm.first == newDegree) {
-                    resultTerm.second += newCoefficient;
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                presult.m_Polynomial.insert({newDegree, newCoefficient});
-            }
+	PolynomialMap result;
+    for (auto term1 : m_Polynomial)
+    {
+        for (auto term2 : right.m_Polynomial)
+        {
+            int deg = term1.first + term2.first;
+            double cof = term1.second * term2.second;
+            result.m_Polynomial[deg] = cof;
         }
     }
-    for (auto it : presult.m_Polynomial) {
-        deg.push_back(it.first);
-        cof.push_back(it.second);
-    }
-	PolynomialMap result = PolynomialMap(deg, cof);
+    result.compress();
     return result;
 }
 

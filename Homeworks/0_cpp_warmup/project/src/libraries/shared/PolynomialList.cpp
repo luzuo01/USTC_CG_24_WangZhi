@@ -3,6 +3,8 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <cmath>
+#define EPSILON 1e-12
 
 #include <cassert>
 
@@ -22,7 +24,23 @@ PolynomialList::PolynomialList(const double* cof, const int* deg, int n) {
     }
 }
 
-PolynomialList::PolynomialList(const vector<int>& deg, const vector<double>& cof) {
+PolynomialList::PolynomialList(const vector<int>& de, const vector<double>& co) {
+    vector<int> deg = de;
+    vector<double> cof = co;
+    int n = deg.size();
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < n - i - 1; ++j) {
+            if (deg[j] > deg[j + 1]) {
+                int temp = deg[j];
+                deg[j] = deg[j + 1];
+                deg[j + 1] = temp;
+
+                int temp2 = cof[j];
+                cof[j] = cof[j + 1];
+                cof[j + 1] = temp2;
+            }
+        }
+    }
     for (int i = 0; i < deg.size(); i++)
     {
         m_Polynomial.push_back(Term(deg[i], cof[i]));
@@ -42,7 +60,16 @@ double& PolynomialList::coff(int i) {
 }
 
 void PolynomialList::compress() {
-    // TODO
+    auto it = m_Polynomial.begin();
+    while (it != m_Polynomial.end())
+    {
+        if (fabs(it -> cof) < EPSILON)
+        {
+            it = m_Polynomial.erase(it);
+        } else {
+            it++;
+        }
+    }
 }
 
 PolynomialList PolynomialList::operator+(const PolynomialList& right) const {
@@ -77,21 +104,6 @@ PolynomialList PolynomialList::operator+(const PolynomialList& right) const {
         deg.push_back(it2 -> deg);
         cof.push_back(it2->cof);
         ++it2;
-    }
-
-    int n = deg.size();
-    for (int i = 0; i < n - 1; ++i) {
-        for (int j = 0; j < n - i - 1; ++j) {
-            if (deg[j] > deg[j + 1]) {
-                int temp = deg[j];
-                deg[j] = deg[j + 1];
-                deg[j + 1] = temp;
-
-                int temp2 = cof[j];
-                cof[j] = cof[j + 1];
-                cof[j + 1] = temp2;
-            }
-        }
     }
 
     PolynomialList result = PolynomialList(deg, cof);
@@ -130,21 +142,6 @@ PolynomialList PolynomialList::operator-(const PolynomialList& right) const {
         deg.push_back(it2 -> deg);
         cof.push_back(- it2->cof);
         ++it2;
-    }
-
-    int n = deg.size();
-    for (int i = 0; i < n - 1; ++i) {
-        for (int j = 0; j < n - i - 1; ++j) {
-            if (deg[j] > deg[j + 1]) {
-                int temp = deg[j];
-                deg[j] = deg[j + 1];
-                deg[j + 1] = temp;
-
-                int temp2 = cof[j];
-                cof[j] = cof[j + 1];
-                cof[j + 1] = temp2;
-            }
-        }
     }
 
     PolynomialList result = PolynomialList(deg, cof);
@@ -206,28 +203,28 @@ PolynomialList& PolynomialList::operator=(const PolynomialList& right) {
 }
 
 void PolynomialList::Print() const {
+    PolynomialList temp;
+    temp.m_Polynomial = m_Polynomial;
+    temp.compress();
     std::cout << "f(x) = ";
-    auto it = m_Polynomial.begin();
-    while (it != m_Polynomial.end()) {
-        if (std::next(it) != m_Polynomial.end() && next(it)->cof > 0){
-            if (it -> deg == 0)
-            {
+    auto it = temp.m_Polynomial.begin();
+    while (it != temp.m_Polynomial.end()) {
+        if (std::next(it) != temp.m_Polynomial.end() && next(it)->cof > 0){
+            if (it -> deg == 0) {
                 std::cout << it -> cof << " + ";
             } else {
                 std::cout << it -> cof << "x^" << it -> deg << " + ";
             }
-        } else if (std::next(it) != m_Polynomial.end() && next(it)->cof <= 0) {
-            if (it -> deg == 0)
-            {
-                std::cout << it -> cof << ' ';
+        } else if (std::next(it) != temp.m_Polynomial.end() && next(it)->cof <= 0) {
+            if (it -> deg == 0) {
+                std::cout << it -> cof << " ";
             } else {
                 std::cout << it -> cof << "x^" << it -> deg << ' ';
             }
-        } else if (std::next(it) == m_Polynomial.end() && it -> cof != 0){
+        } else if (std::next(it) == temp.m_Polynomial.end() && it -> cof != 0){
             std::cout << it -> cof << "x^" << it -> deg;
         }
         it++;
-
     }
     std::cout << endl;
 }
