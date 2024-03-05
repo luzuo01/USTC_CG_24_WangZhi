@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../libs/libview_d.a CMakeFiles/view.dir/comp_canvas.cpp.o CMakeFiles/view.dir/comp_image.cpp.o CMakeFiles/view.dir/shapes/ellipse.cpp.o CMakeFiles/view.dir/shapes/line.cpp.o CMakeFiles/view.dir/shapes/polygon.cpp.o CMakeFiles/view.dir/shapes/rect.cpp.o CMakeFiles/view.dir/window.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../libs/libview_d.a

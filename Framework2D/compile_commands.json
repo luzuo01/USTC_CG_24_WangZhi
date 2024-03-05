@@ -1,0 +1,644 @@
+[
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/glad.dir/glad/src/glad.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/src/glad.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/src/glad.c",
+  "output": "third_party/CMakeFiles/glad.dir/glad/src/glad.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/ImGuiFileDialog/ImGuiFileDialog.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog/ImGuiFileDialog.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog/ImGuiFileDialog.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/ImGuiFileDialog/ImGuiFileDialog.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/backends/imgui_impl_glfw.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/backends/imgui_impl_opengl3.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/imgui.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_demo.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_demo.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_draw.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_draw.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_tables.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_tables.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_widgets.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/imgui_widgets.cpp",
+  "output": "third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/context.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/context.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/init.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/init.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/input.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/input.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/monitor.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/monitor.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/vulkan.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/vulkan.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/window.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/window.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_init.m",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_init.m",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_joystick.m",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_joystick.m",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_monitor.m",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_monitor.m",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_window.m",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_window.m",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_time.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/cocoa_time.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/posix_thread.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/posix_thread.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/nsgl_context.m",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/nsgl_context.m",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/egl_context.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/egl_context.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/osmesa_context.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/src/osmesa_context.c",
+  "output": "third_party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/boing.dir/boing.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/boing.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/boing.c",
+  "output": "third_party/glfw/examples/CMakeFiles/boing.dir/boing.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/boing.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/boing.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/gears.dir/gears.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/gears.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/gears.c",
+  "output": "third_party/glfw/examples/CMakeFiles/gears.dir/gears.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/gears.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/gears.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/heightmap.dir/heightmap.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/heightmap.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/heightmap.c",
+  "output": "third_party/glfw/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/heightmap.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/offscreen.dir/offscreen.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/offscreen.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/offscreen.c",
+  "output": "third_party/glfw/examples/CMakeFiles/offscreen.dir/offscreen.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/offscreen.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/offscreen.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/particles.dir/particles.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/particles.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/particles.c",
+  "output": "third_party/glfw/examples/CMakeFiles/particles.dir/particles.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/particles.dir/__/deps/tinycthread.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "output": "third_party/glfw/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/particles.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/particles.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/particles.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/sharing.dir/sharing.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/sharing.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/sharing.c",
+  "output": "third_party/glfw/examples/CMakeFiles/sharing.dir/sharing.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/sharing.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/sharing.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/simple.dir/simple.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/simple.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/simple.c",
+  "output": "third_party/glfw/examples/CMakeFiles/simple.dir/simple.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/simple.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/simple.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/splitview.dir/splitview.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/splitview.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/splitview.c",
+  "output": "third_party/glfw/examples/CMakeFiles/splitview.dir/splitview.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/splitview.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/splitview.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/wave.dir/wave.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/wave.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples/wave.c",
+  "output": "third_party/glfw/examples/CMakeFiles/wave.dir/wave.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/wave.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/examples/CMakeFiles/wave.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/clipboard.dir/clipboard.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/clipboard.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/clipboard.c",
+  "output": "third_party/glfw/tests/CMakeFiles/clipboard.dir/clipboard.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/clipboard.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/clipboard.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/clipboard.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/clipboard.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/events.dir/events.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/events.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/events.c",
+  "output": "third_party/glfw/tests/CMakeFiles/events.dir/events.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/events.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/events.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/events.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/events.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/msaa.dir/msaa.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/msaa.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/msaa.c",
+  "output": "third_party/glfw/tests/CMakeFiles/msaa.dir/msaa.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/msaa.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/msaa.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/msaa.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/msaa.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/glfwinfo.dir/glfwinfo.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/glfwinfo.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/glfwinfo.c",
+  "output": "third_party/glfw/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/glfwinfo.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/glfwinfo.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/glfwinfo.dir/__/deps/glad_vulkan.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_vulkan.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_vulkan.c",
+  "output": "third_party/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_vulkan.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/iconify.dir/iconify.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/iconify.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/iconify.c",
+  "output": "third_party/glfw/tests/CMakeFiles/iconify.dir/iconify.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/iconify.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/iconify.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/iconify.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/iconify.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/monitors.dir/monitors.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/monitors.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/monitors.c",
+  "output": "third_party/glfw/tests/CMakeFiles/monitors.dir/monitors.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/monitors.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/monitors.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/monitors.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/monitors.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/reopen.dir/reopen.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/reopen.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/reopen.c",
+  "output": "third_party/glfw/tests/CMakeFiles/reopen.dir/reopen.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/reopen.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/reopen.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/cursor.dir/cursor.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/cursor.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/cursor.c",
+  "output": "third_party/glfw/tests/CMakeFiles/cursor.dir/cursor.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/cursor.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/cursor.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/empty.dir/empty.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/empty.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/empty.c",
+  "output": "third_party/glfw/tests/CMakeFiles/empty.dir/empty.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/empty.dir/__/deps/tinycthread.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "output": "third_party/glfw/tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/empty.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/empty.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/gamma.dir/gamma.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/gamma.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/gamma.c",
+  "output": "third_party/glfw/tests/CMakeFiles/gamma.dir/gamma.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/gamma.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/gamma.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/icon.dir/icon.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/icon.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/icon.c",
+  "output": "third_party/glfw/tests/CMakeFiles/icon.dir/icon.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/icon.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/icon.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/inputlag.dir/inputlag.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/inputlag.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/inputlag.c",
+  "output": "third_party/glfw/tests/CMakeFiles/inputlag.dir/inputlag.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/inputlag.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/inputlag.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/inputlag.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/inputlag.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/joysticks.dir/joysticks.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/joysticks.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/joysticks.c",
+  "output": "third_party/glfw/tests/CMakeFiles/joysticks.dir/joysticks.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/joysticks.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/joysticks.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/opacity.dir/opacity.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/opacity.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/opacity.c",
+  "output": "third_party/glfw/tests/CMakeFiles/opacity.dir/opacity.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/opacity.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/opacity.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/tearing.dir/tearing.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/tearing.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/tearing.c",
+  "output": "third_party/glfw/tests/CMakeFiles/tearing.dir/tearing.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/tearing.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/tearing.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/threads.dir/threads.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/threads.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/threads.c",
+  "output": "third_party/glfw/tests/CMakeFiles/threads.dir/threads.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/threads.dir/__/deps/tinycthread.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/tinycthread.c",
+  "output": "third_party/glfw/tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/threads.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/threads.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/timeout.dir/timeout.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/timeout.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/timeout.c",
+  "output": "third_party/glfw/tests/CMakeFiles/timeout.dir/timeout.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/timeout.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/title.dir/title.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/title.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/title.c",
+  "output": "third_party/glfw/tests/CMakeFiles/title.dir/title.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/title.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/title.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/triangle-vulkan.dir/triangle-vulkan.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/triangle-vulkan.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/triangle-vulkan.c",
+  "output": "third_party/glfw/tests/CMakeFiles/triangle-vulkan.dir/triangle-vulkan.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/triangle-vulkan.dir/__/deps/glad_vulkan.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_vulkan.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_vulkan.c",
+  "output": "third_party/glfw/tests/CMakeFiles/triangle-vulkan.dir/__/deps/glad_vulkan.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/windows.dir/windows.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/windows.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests/windows.c",
+  "output": "third_party/glfw/tests/CMakeFiles/windows.dir/windows.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/windows.dir/__/deps/getopt.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/getopt.c",
+  "output": "third_party/glfw/tests/CMakeFiles/windows.dir/__/deps/getopt.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/tests",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/windows.dir/__/deps/glad_gl.c.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/deps/glad_gl.c",
+  "output": "third_party/glfw/tests/CMakeFiles/windows.dir/__/deps/glad_gl.c.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/comp_canvas.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/comp_canvas.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/comp_canvas.cpp",
+  "output": "src/view/CMakeFiles/view.dir/comp_canvas.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/comp_image.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/comp_image.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/comp_image.cpp",
+  "output": "src/view/CMakeFiles/view.dir/comp_image.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/shapes/ellipse.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/ellipse.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/ellipse.cpp",
+  "output": "src/view/CMakeFiles/view.dir/shapes/ellipse.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/shapes/line.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/line.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/line.cpp",
+  "output": "src/view/CMakeFiles/view.dir/shapes/line.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/shapes/polygon.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/polygon.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/polygon.cpp",
+  "output": "src/view/CMakeFiles/view.dir/shapes/polygon.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/shapes/rect.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/rect.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/shapes/rect.cpp",
+  "output": "src/view/CMakeFiles/view.dir/shapes/rect.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/view.dir/window.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/window.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/view/window.cpp",
+  "output": "src/view/CMakeFiles/view.dir/window.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/demo_hello_world.dir/demo_hello_world.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/demo_hello_world.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/demo_hello_world.cpp",
+  "output": "src/demo/CMakeFiles/demo_hello_world.dir/demo_hello_world.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/demo.dir/demo.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/demo.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/demo.cpp",
+  "output": "src/demo/CMakeFiles/demo.dir/demo.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/demo.dir/window_demo.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/window_demo.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/demo/window_demo.cpp",
+  "output": "src/demo/CMakeFiles/demo.dir/window_demo.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/1_MiniDraw.dir/main.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw/main.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw/main.cpp",
+  "output": "src/assignments/1_MiniDraw/CMakeFiles/1_MiniDraw.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glfw/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/glad/include -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/imgui/backends -I/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/third_party/ImGuiFileDialog -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/1_MiniDraw.dir/window_minidraw.cpp.o -c /Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw/window_minidraw.cpp",
+  "file": "/Users/wangzhi/Desktop/USTC_CG_24/Framework2D/src/assignments/1_MiniDraw/window_minidraw.cpp",
+  "output": "src/assignments/1_MiniDraw/CMakeFiles/1_MiniDraw.dir/window_minidraw.cpp.o"
+}
+]
