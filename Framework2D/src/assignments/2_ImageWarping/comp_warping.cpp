@@ -1,7 +1,12 @@
 #include "comp_warping.h"
-
+#include "warpper.h"
 #include <cmath>
-
+#include "fisheye.h"
+#include "IDW.h"
+#include "RBF.h"
+#include <annoylib.h>
+#include <kissrandom.h>
+using namespace Annoy;
 namespace USTC_CG
 {
 using uchar = unsigned char;
@@ -105,16 +110,104 @@ void CompWarping::gray_scale()
     // After change the image, we should reload the image data to the renderer
     update();
 }
-void CompWarping::warping()
-{
-    // HW2_TODO: You should implement your own warping function that interpolate
-    // the selected points.
-    // You can design a class for such warping operations, utilizing the
-    // encapsulation, inheritance, and polymorphism features of C++. More files
-    // like "*.h", "*.cpp" can be added to this directory or anywhere you like.
 
+
+std::vector<Pixel> CompWarping::gap_filling(std::vector<Pixel>& mapped_to,
+ std::vector<Pixel>& unmapped_to) {
+    std::vector<Pixel> result;
+    // Build Annoy index
+    int dimension = 2;
+    AnnoyIndex<int, float, Euclidean, Kiss32Random, AnnoyIndexSingleThreadedBuildPolicy> index(dimension);
+    for (int i = 0; i < mapped_to.size(); ++i) {
+        Pixel pixel = mapped_to[i];
+        vector<float> coord = {(float) pixel.x, (float) pixel.y};
+        index.add_item(i, coord.data());
+    }
+    index.build(12);  // Build the index with some trees
+
+    int count = mapped_to.size();
+    for (auto& uncolored_pixel : unmapped_to)
+    {
+        // Find k nearest neighbors for each uncolored pixel and average their values
+        const int k = 70; 
+        vector<float> coord = {(float) uncolored_pixel.x, (float) uncolored_pixel.y};
+        index.add_item(count, coord.data());
+        count++;
+        vector<int> nearest_indices;
+        vector<float> distances;
+        index.get_nns_by_vector(coord.data(), k, -1, &nearest_indices, &distances);  // Get nearest neighbors
+
+        // get the total distance
+        float total_distance = 0;
+        for (int i = 0; i < k; ++i) {
+            total_distance += exp(distances[i]);
+        }
+        int colored_count = 0;
+        int uncolored_count = 0;
+        for (int i = 0; i < k; i++)
+        {
+            if (nearest_indices[i] < mapped_to.size())
+            {
+                // this means that it's a colored point 
+                colored_count ++;
+            } else {
+                uncolored_count ++;
+            }
+        }
+        //initialize average value
+        vector<unsigned char> average_value(uncolored_pixel.values.size(), 0); 
+       //only interpolate when it's surronded by colored points
+        if (uncolored_count <= 1) {
+            // now we average the colors of these k neighbors by distance squared
+            for (int i = 0; i < k; ++i) {
+                if (nearest_indices[i] < mapped_to.size())
+                {
+                    for (size_t j = 0; j < mapped_to[nearest_indices[i]].values.size(); ++j) {
+                        if (nearest_indices[i] < mapped_to.size())
+                        {
+                            average_value[j] += mapped_to[nearest_indices[i]].values[j] * 
+                            exp(distances[i]) / total_distance;
+                        } else {
+                            average_value[j] += 
+                            unmapped_to[nearest_indices[i] - mapped_to.size()].values[j] *
+                            exp(distances[i]) / total_distance;
+                        }
+                    }
+                } 
+            }
+        }
+        Pixel pixel(uncolored_pixel.x, uncolored_pixel.y, average_value);
+        result.push_back(pixel);
+    }
+    return result;
+}
+
+void CompWarping::warping(int i)
+{
+    Warpper* our_warpper;
+    if (i == 1)
+    {
+        our_warpper = new Fisheye();
+    } else if (i == 2 && start_points_.size() != 0)
+    {
+        our_warpper = new IDW(start_points_, end_points_);
+        //the next line should optimizes the D's in IDW, but I haven't fixed the bugs yet
+        //our_warpper->initialize();
+
+    } else if ((i == 3 || i == 4) && start_points_.size() != 0)
+    {
+        our_warpper = new RBF(start_points_, end_points_);
+        our_warpper->initialize();
+    } else {
+        // to prevent the program from crashing if the user hasn't seleceted points.
+        our_warpper = new RBF();
+    }
     // Create a new image to store the result
     Image warped_image(*data_);
+    // we'll keep track of vectors of mapped_to and unmapped_to pixels
+    std::vector<Pixel> mapped_to, unmapped_to;
+    std::vector<std::vector<bool>> range(data_->width(), 
+    std::vector<bool> (data_->height(), false));
     // Initialize the color of result image
     for (int y = 0; y < data_->height(); ++y)
     {
@@ -124,7 +217,6 @@ void CompWarping::warping()
         }
     }
 
-    // Example: (simplified) "fish-eye" warping
     // For each (x, y) from the input image, the "fish-eye" warping transfer it
     // to (x', y') in the new image:
     // Note: For this transformation ("fish-eye" warping), one can also
@@ -135,20 +227,55 @@ void CompWarping::warping()
         {
             // Apply warping function to (x, y), and we can get (x', y')
             auto [new_x, new_y] =
-                fisheye_warping(x, y, data_->width(), data_->height());
+                our_warpper -> warp(x, y, data_->width(), data_->height());
             // Copy the color from the original image to the result image
             if (new_x >= 0 && new_x < data_->width() && new_y >= 0 &&
                 new_y < data_->height())
             {
                 std::vector<unsigned char> pixel = data_->get_pixel(x, y);
                 warped_image.set_pixel(new_x, new_y, pixel);
+                // add the pixel to mapped_to and mark the coordinates in range
+                Pixel p = {new_x, new_y, pixel}; 
+                if (range[new_x][new_y] == false)
+                {
+                mapped_to.push_back(p);
+                range[new_x][new_y] = true;
+                }
             }
         }
     }
 
+    // set unmapped_to
+     for (int y = 0; y < data_->height(); ++y)
+    {
+        for (int x = 0; x < data_->width(); ++x)
+        {
+            if (range[x][y] == false)
+            {
+                std::vector<unsigned char> color = data_->get_pixel(x, y);
+                Pixel p = {x, y, color};
+                unmapped_to.push_back(p);
+            }
+        }
+    }
+
+
+    // with gap filling, RBF
+    if (i == 4)
+    {
+        //gap filling 
+        std::vector<Pixel> gaps = gap_filling(mapped_to, unmapped_to);
+        for (auto& pt : gaps) {
+            std::vector<unsigned char> pixel = warped_image.get_pixel(pt.x, pt.y);
+            warped_image.set_pixel(pt.x, pt.y, pt.values);
+        }
+    }
     *data_ = std::move(warped_image);
     update();
 }
+
+
+
 void CompWarping::restore()
 {
     *data_ = *back_up_;

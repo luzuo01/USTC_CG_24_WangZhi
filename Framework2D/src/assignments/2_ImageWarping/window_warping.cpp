@@ -69,13 +69,35 @@ void ImageWarping::draw_toolbar()
             p_image_->init_selections();
             p_image_->enable_selecting(true);
         }
-        if (ImGui::MenuItem("Warping") && p_image_)
+        ImGui::Separator();
+        if (ImGui::BeginMenu("Warpping"))
         {
-            p_image_->enable_selecting(false);
-            p_image_->warping();
-            p_image_->init_selections();
+            if (ImGui::MenuItem("Fisheye") && p_image_)
+            {
+                p_image_->enable_selecting(false);
+                p_image_->warping(1);
+                p_image_->init_selections();
+            }
+            if (ImGui::MenuItem("IDW") && p_image_)
+            {
+                p_image_->enable_selecting(false);
+                p_image_->warping(2);
+                p_image_->init_selections();
+            }
+            if (ImGui::MenuItem("RBF") && p_image_)
+            {
+                p_image_->enable_selecting(false);
+                p_image_->warping(3);
+                p_image_->init_selections();
+            }
+            if (ImGui::MenuItem("RBF: gap filled") && p_image_)
+            {
+                p_image_->enable_selecting(false);
+                p_image_->warping(4);
+                p_image_->init_selections();
+            }
+            ImGui::EndMenu();
         }
-        // HW2_TODO: You can add more interactions for IDW, RBF, etc.
         ImGui::Separator();
         if (ImGui::MenuItem("Restore") && p_image_)
         {

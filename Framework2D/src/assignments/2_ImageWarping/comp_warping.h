@@ -4,6 +4,13 @@
 
 namespace USTC_CG
 {
+// Define struct for pixel
+struct Pixel {
+    int x;
+    int y;
+    std::vector<unsigned char> values; // Assume grayscale value for simplicity
+    Pixel(int x_, int y_, const std::vector<unsigned char>& value_) : x(x_), y(y_), values(value_) {}
+};
 // Image component for warping and other functions
 class CompWarping : public ImageEditor
 {
@@ -17,7 +24,7 @@ class CompWarping : public ImageEditor
     void invert();
     void mirror(bool is_horizontal, bool is_vertical);
     void gray_scale();
-    void warping();
+    void warping(int i);
     void restore();
 
     // Point selecting interaction
@@ -38,6 +45,7 @@ class CompWarping : public ImageEditor
    private:
     // A simple "fish-eye" warping function
     std::pair<int, int> fisheye_warping(int x, int y, int width, int height);
+    std::vector<Pixel> gap_filling(std::vector<Pixel>& mapped_to, std::vector<Pixel>& unmapped_to);
 };
 
 }  // namespace USTC_CG
