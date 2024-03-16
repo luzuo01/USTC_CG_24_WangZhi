@@ -8,7 +8,7 @@ namespace USTC_CG
 struct Pixel {
     int x;
     int y;
-    std::vector<unsigned char> values; // Assume grayscale value for simplicity
+    std::vector<unsigned char> values;
     Pixel(int x_, int y_, const std::vector<unsigned char>& value_) : x(x_), y(y_), values(value_) {}
 };
 // Image component for warping and other functions
