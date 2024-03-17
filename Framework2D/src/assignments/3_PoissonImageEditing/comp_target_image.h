@@ -83,9 +83,6 @@ class CompTargetImage : public ImageEditor
 
     // then the two methods above are used in the Eigen sparse solver
     std::vector<Pixel> possion_solver(std::vector<VectorXf> vector, std::vector<Pixel> region);
-    // accelerate the possion solver
-    std::vector<Pixel> possion_solver_pre_decomposition
-    (MatrixXf matrix, std::vector<VectorXf> vector);
 
     // keep track of the modified region and boundary
     std::vector<std::vector<bool>> region;
