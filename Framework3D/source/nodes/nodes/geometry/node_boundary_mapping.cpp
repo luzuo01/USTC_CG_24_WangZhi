@@ -4,7 +4,7 @@
 #include "Nodes/node_register.h"
 #include "geom_node_base.h"
 #include "utils/util_openmesh_bind.h"
-
+#include "utils/util_laplacian_solver.h"
 /*
 ** @brief HW4_TutteParameterization
 **
@@ -48,7 +48,7 @@ static void node_map_boundary_to_circle_exec(ExeParams params)
     if (!input.get_component<MeshComponent>()) {
         throw std::runtime_error("Boundary Mapping: Need Geometry Input.");
     }
-    throw std::runtime_error("Not implemented");
+    //throw std::runtime_error("Not implemented");
 
     /* ----------------------------- Preprocess -------------------------------
     ** Create a halfedge structure (using OpenMesh) for the input mesh. The
@@ -80,7 +80,25 @@ static void node_map_boundary_to_circle_exec(ExeParams params)
     ** Note: It would be better to normalize the boundary to a unit circle in [0,1]x[0,1] for
     ** texture mapping.
     */
+    Laplace_solver solver;
+    solver.detect(halfedge_mesh);
+    vector<VertexHandle> boundary_vertices = solver.get_boundary();
+    double length = solver.get_boundary_length();
 
+    int numPoints = boundary_vertices.size();
+    double angleIncrement = 2.0 * M_PI / numPoints;
+    double radius = 1.5;
+    double x_center = 0.5;
+    double y_center = 0.5;
+
+    for (int i = 0; i < numPoints; ++i) {
+        double angle = i * angleIncrement;
+        double x = x_center + radius * cos(angle);
+        double y = y_center + radius * sin(angle);
+        PolyMesh::Point point(x, y, 0);
+        halfedge_mesh -> set_point(boundary_vertices[i], point);
+    }
+    std::cout<< "boundary mapped to a circle" << std::endl;
     /* ----------------------------- Postprocess ------------------------------
     ** Convert the result mesh from the halfedge structure back to GOperandBase format as the node's
     ** output.
@@ -118,7 +136,7 @@ static void node_map_boundary_to_square_exec(ExeParams params)
     if (!input.get_component<MeshComponent>()) {
         throw std::runtime_error("Input does not contain a mesh");
     }
-    throw std::runtime_error("Not implemented");
+    //throw std::runtime_error("Not implemented");
 
     /* ----------------------------- Preprocess -------------------------------
     ** Create a halfedge structure (using OpenMesh) for the input mesh.
@@ -138,7 +156,51 @@ static void node_map_boundary_to_square_exec(ExeParams params)
     ** Note: It would be better to normalize the boundary to a unit circle in [0,1]x[0,1] for
     ** texture mapping.
     */
+    Laplace_solver solver;
+    solver.detect(halfedge_mesh);
+    vector<VertexHandle> boundary_vertices = solver.get_boundary();
+    double length = solver.get_boundary_length();
 
+    int numPoints = boundary_vertices.size();
+    double angleIncrement = 2.0 * M_PI / numPoints;
+    double x_center = 0.5;
+    double y_center = 0.5;
+    double tolerance = angleIncrement / 2;
+    for (int i = 0; i < numPoints; ++i) {
+        double angle = i * angleIncrement;
+        double x, y;
+        if (angle >= 0 && angle < M_PI / 4) {
+            x = 1.0;
+            y = 0.5 + 0.5 * tan(angle);
+        } else if (abs(angle - M_PI / 4) < tolerance) {
+            x = 1.0;
+            y = 1.0;
+        } else if (angle >= M_PI / 4 && angle < 3 * M_PI / 4) {
+            x = 0.5 + 0.5 * tan(M_PI / 2 - angle);
+            y = 1.0;
+        } else if (abs(angle - 3 * M_PI / 4) < tolerance) {
+            x = 0;
+            y = 1.0;
+        } else if (angle >= 3 * M_PI / 4 && angle < 5 * M_PI / 4) {
+            x = 0.0;
+            y = 0.5 + 0.5 * tan(M_PI - angle);
+        } else if (abs(angle - 5 * M_PI / 4) < tolerance) {
+            x = 0;
+            y = 0;
+        } else if (angle >= 5 * M_PI / 4 && angle < 7 * M_PI / 4) {
+            x = 0.5 + 0.5 * tan(angle - 3 * M_PI / 2);
+            y = 0.0;
+        } else if (abs(angle - 7 * M_PI / 4) < tolerance) {
+            x = 1.0;
+            y = 0;
+        } else if (angle >= 7 * M_PI / 4 && angle < 2 * M_PI) {
+            x = 1.0;
+            y = 0.5 + 0.5 * tan(angle - 2 * M_PI);
+        }
+        PolyMesh::Point point(x, y, 0);
+        halfedge_mesh -> set_point(boundary_vertices[i], point);
+    }
+    std::cout<< "boundary mapped to a square" << std::endl;
     /* ----------------------------- Postprocess ------------------------------
     ** Convert the result mesh from the halfedge structure back to GOperandBase format as the node's
     ** output.
