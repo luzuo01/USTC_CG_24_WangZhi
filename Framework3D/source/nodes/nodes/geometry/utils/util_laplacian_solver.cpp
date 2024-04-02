@@ -18,15 +18,11 @@ void Laplace_solver::initialize(shared_ptr<PolyMesh> our_mesh, int weight_type) 
         set_uniform_weights();
     }
     assemble_A();
-    std::cout << "the matrix A is assembled" << std::endl;
     assemble_targets();
-    std::cout << "target vectors are assembled" << std::endl;
-    std::cout<< "init success" << std::endl;
 }
 void Laplace_solver::detect(shared_ptr<PolyMesh> our_mesh) {
     this->our_mesh = our_mesh;
     boundary_detect(our_mesh);
-    std::cout << "boundary detected" << std::endl;
 }
 std::map<int, PolyMesh::Point> Laplace_solver::solve() {
     std::map<int, PolyMesh::Point> rst;
@@ -49,7 +45,6 @@ std::map<int, PolyMesh::Point> Laplace_solver::solve() {
         PolyMesh::Point point (position[0], position[1], position[2]);
         rst[relabel[j]] = point;
     }
-    std::cout << "solve completed" << std::endl;
     return rst;
 }
 

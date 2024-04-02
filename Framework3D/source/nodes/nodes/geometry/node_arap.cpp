@@ -4,7 +4,7 @@
 #include "Nodes/node_register.h"
 #include "geom_node_base.h"
 #include "utils/util_openmesh_bind.h"
-
+#include "utils/parameterizer_arap.h"
 /*
 ** @brief HW5_ARAP_Parameterization
 **
@@ -60,7 +60,7 @@ static void node_arap_exec(ExeParams params)
     if (!input.get_component<MeshComponent>()) {
         throw std::runtime_error("Need Geometry Input.");
     }
-    throw std::runtime_error("Not implemented");
+    //throw std::runtime_error("Not implemented");
 
     /* ----------------------------- Preprocess -------------------------------
     ** Create a halfedge structure (using OpenMesh) for the input mesh. The
@@ -88,10 +88,19 @@ static void node_arap_exec(ExeParams params)
    **  - Fixed points' selection is crucial for ARAP and ASAP.
    **  - Encapsulate algorithms into classes for modularity.
    */
-
-    // The result UV coordinates 
+  // The result UV coordinates 
     pxr::VtArray<pxr::GfVec2f> uv_result;
-
+    uv_result.resize(halfedge_mesh -> n_vertices());
+    Parameterizer_ARAP worker;
+    worker.initialize(halfedge_mesh);
+    worker.iterate(1);
+    std::map<int, Vector2d> result  = worker.get_parameterization();
+    for (size_t i = 0; i < halfedge_mesh -> n_vertices(); i++)
+    {
+        assert(result.size() == halfedge_mesh -> n_vertices());
+        pxr::GfVec2f point = pxr::GfVec2f(result[i][0], result[i][1]);
+        uv_result[i] = point;
+    }
     // Set the output of the node
     params.set_output("OutputUV", uv_result);
 }
