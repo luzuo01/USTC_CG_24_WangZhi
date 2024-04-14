@@ -13,6 +13,21 @@
 #include "resource_allocator_instance.hpp"
 #include "rich_type_buffer.hpp"
 #include "utils/draw_fullscreen.h"
+#include "NODES_FILES_DIR.h"
+#include "Nodes/node.hpp"
+#include "Nodes/node_declare.hpp"
+#include "Nodes/node_register.h"
+#include "Nodes/socket_types/basic_socket_types.hpp"
+#include "camera.h"
+#include "geometries/mesh.h"
+#include "light.h"
+#include "pxr/base/gf/frustum.h"
+#include "pxr/imaging/glf/simpleLight.h"
+#include "pxr/imaging/hd/tokens.h"
+#include "render_node_base.h"
+#include "resource_allocator_instance.hpp"
+#include "rich_type_buffer.hpp"
+#include "utils/draw_fullscreen.h"
 
 namespace USTC_CG::node_deferred_lighting {
 
@@ -134,8 +149,22 @@ static void node_exec(ExeParams params)
             pxr::GfVec3f position3(position4[0], position4[1], position4[2]);
 
             auto radius = lights[i]->Get(HdLightTokens->radius).Get<float>();
-            
-            light_vector.emplace_back(GfMatrix4f(), GfMatrix4f(), position3, 0.f, diffuse3, i);
+            GfMatrix4f light_view_mat;
+            GfMatrix4f light_projection_mat;
+
+            if (lights[i]->GetLightType() == HdPrimTypeTokens->sphereLight) {
+                GfFrustum frustum;
+                GfVec3f light_position = { light_params.GetPosition()[0],
+                                           light_params.GetPosition()[1],
+                                           light_params.GetPosition()[2] };
+
+                light_view_mat =
+                    GfMatrix4f().SetLookAt(light_position, GfVec3f(0, 0, 0), GfVec3f(0, 0, 1));
+                frustum.SetPerspective(170.f, 1.0, 1, 25.f);
+                light_projection_mat = GfMatrix4f(frustum.ComputeProjectionMatrix());
+            }
+
+            light_vector.emplace_back(light_projection_mat, light_view_mat, position3, 0.f, diffuse3, i);
 
             // You can add directional light here, and also the corresponding shadow map calculation
             // part.
