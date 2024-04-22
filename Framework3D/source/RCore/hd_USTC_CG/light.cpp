@@ -315,12 +315,32 @@ Color Hd_USTC_CG_Rect_Light::Sample(
     float& sample_light_pdf,
     const std::function<float()>& uniform_float)
 {
-    return {};
+    float sample_rect_pdf = 1.0 / area;
+    GfVec3f xAxis = (corner2 - corner0).GetNormalized();
+    GfVec3f yAxis = (corner1 - corner0).GetNormalized();
+    float x = (uniform_float() - 0.5) * width;
+    float y = (uniform_float() - 0.5) * height;
+    sampled_light_pos = center + x * xAxis + y * yAxis;
+    dir = (sampled_light_pos - pos).GetNormalized();
+    auto distance = (sampled_light_pos - pos).GetNormalized();
+
+    sample_light_pdf = sample_rect_pdf / (distance * distance);
+    return irradiance / M_PI;
 }
 
 Color Hd_USTC_CG_Rect_Light::Intersect(const GfRay& ray, float& depth)
 {
-    return {};
+    double distance;
+    if (ray.Intersect(corner0, corner1, corner2, &distance)) {
+        depth = distance;
+        return irradiance / M_PI;
+    }
+    else if (ray.Intersect(corner3, corner1, corner2, &distance)) {
+        depth = distance;
+        return irradiance / M_PI;
+    }
+    depth = std::numeric_limits<float>::infinity();
+    return { 0, 0, 0 };
 }
 
 void Hd_USTC_CG_Rect_Light::Sync(
@@ -345,6 +365,8 @@ void Hd_USTC_CG_Rect_Light::Sync(
     power = sceneDelegate->GetLightParamValue(id, HdLightTokens->color).Get<GfVec3f>() * diffuse;
 
     // HW7_TODO: calculate irradiance
+    area = width * height;
+    irradiance = power / area;
 }
 
 USTC_CG_NAMESPACE_CLOSE_SCOPE

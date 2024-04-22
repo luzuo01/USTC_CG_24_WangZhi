@@ -140,6 +140,9 @@ class Hd_USTC_CG_Rect_Light : public Hd_USTC_CG_Light {
     GfVec3f corner3;
     float width;
     float height;
+    float area;
+    GfVec3f irradiance;
+    GfVec3f center = (corner0 + corner1 + corner2 + corner3) / 4.0;
     GfVec3f power;
 };
 

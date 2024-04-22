@@ -22,7 +22,7 @@ GfVec3f PathIntegrator::EstimateOutGoingRadiance(
     const std::function<float()>& uniform_float,
     int recursion_depth)
 {
-    if (recursion_depth >= 50) {
+    if (recursion_depth >= 12) {
         return {};
     }
 
@@ -51,6 +51,23 @@ GfVec3f PathIntegrator::EstimateOutGoingRadiance(
     // HW7_TODO: Estimate global lighting here.
     GfVec3f globalLight = GfVec3f{0.f};
 
+    float prr = 0.8;
+    float ksi = uniform_float();
+    if (ksi > prr) {
+    } else {
+        GfVec3d dir = ray.GetDirection().GetNormalized();
+        GfVec3d norm = si.geometricNormal.GetNormalized();
+        float cosVal = dir * norm;
+        if (Intersect(ray, si)) {
+            GfVec3f newRay;
+            float pdf;
+            si.Sample(newRay, pdf, uniform_float);
+            GfVec3f starting_point = si.position + 0.00001f * si.geometricNormal;
+            GfVec3f end_point = starting_point + newRay;
+            GfRay nextRay(starting_point, end_point);
+            globalLight = EstimateOutGoingRadiance(nextRay, uniform_float, recursion_depth + 1) / prr;
+        }
+    }
     color = directLight + globalLight;
 
     return color;
