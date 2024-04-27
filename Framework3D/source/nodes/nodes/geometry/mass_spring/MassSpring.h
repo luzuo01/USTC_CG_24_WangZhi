@@ -62,13 +62,13 @@ class MassSpring {
     Eigen::MatrixXd getSphereCollisionForce(Eigen::Vector3d center, double radius);
 
     // Simulation parameters
-    double stiffness = 1000.0;
+    double stiffness = 10.0;
     double damping = 0.995;
     enum TimeIntegrator time_integrator = IMPLICIT_EULER;
     double mass = 1.0;  // total mass of the mesh
     double h = 1e-2;    // time step
     Eigen::Vector3d gravity = { 0, 0, -9.8 };
-    Eigen::Vector3d wind_ext_acc = { 0, 0, 0 }; // (HW TODO) feel free to change the wind acceleration
+    Eigen::Vector3d wind_ext_acc = { 4.5, -6.5, 1.0}; // (HW TODO) feel free to change the wind acceleration
 
     // (HW Optional) sphere collision parameters
     double collision_penalty_k = 10000.0;

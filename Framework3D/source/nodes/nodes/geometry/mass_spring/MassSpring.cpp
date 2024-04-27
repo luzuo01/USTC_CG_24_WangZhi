@@ -33,6 +33,8 @@ void MassSpring::step()
 
     unsigned n_vertices = X.rows();
 
+    const auto I = Eigen::MatrixXd::Identity(3 * n_vertices, 3 * n_vertices);
+
     // The reason to not use 1.0 as mass per vertex: the cloth gets heavier as we increase the resolution
     double mass_per_vertex =
         mass / n_vertices; 
@@ -48,14 +50,58 @@ void MassSpring::step()
         TIC(step)
 
         // (HW TODO) 
-        // auto H_elastic = computeHessianSparse(stiffness);  // size = [nx3, nx3]
-
+        auto H_elastic = computeHessianSparse(stiffness);  // size = [nx3, nx3]
+        // then we get H_g from H_elastic
+        Eigen::SparseMatrix<double> H_g = mass_per_vertex * I / h / h + H_elastic;
+        // translate the diagonal to ensure positive definite-ness
+        double epsilon = 0.02;
+        for (size_t i = 0; i < 3 * n_vertices; i++)
+        {
+            if (!dirichlet_bc_mask[i])
+            {
+                H_g.coeffRef(i, i) += epsilon;
+            }
+        }
+        
+        if (checkSPD(H_g))
+        {
         // compute Y 
+        Eigen::MatrixXd Y = X + h * vel;
+        Y.rowwise() += h * h * acceleration_ext.transpose();
+
+        // compute grad_g
+        Eigen::MatrixXd grad_g = mass_per_vertex * (X - Y) / h / h + computeGrad(stiffness);
+
+        // then we fix certain points 
+        for (size_t i = 0; i < n_vertices; i++)
+        {
+            if (dirichlet_bc_mask[i])
+            {
+                Eigen::Vector3d vec = Eigen::Vector3d::Zero();
+                grad_g.row(i) =  vec;
+            }
+        }
+
+        // flatten grad_g
+        VectorXd grad_g_flatten = flatten(grad_g);
+        VectorXd X_flatten = flatten(X);
+
 
         // Solve Newton's search direction with linear solver 
-        
-        // update X and vel 
+        SparseLU<SparseMatrix<double>> solver;
+        solver.compute(H_g);
+        Eigen::VectorXd delta_X_flatten = solver.solve((-1.0) * grad_g_flatten);
 
+        // update X and vel 
+        X_flatten += delta_X_flatten;
+        Eigen::MatrixXd X_prev = X;
+        X = unflatten(X_flatten);
+        vel = (X - X_prev) / h;
+        } else {
+            std::cerr << "The Hessian is not positive definite!" << std::endl;
+            return;
+        }
+        
         TOC(step)
     }
     else if (time_integrator == SEMI_IMPLICIT_EULER) {
@@ -63,18 +109,24 @@ void MassSpring::step()
         // Semi-implicit Euler
         Eigen::MatrixXd acceleration = -computeGrad(stiffness) / mass_per_vertex;
         acceleration.rowwise() += acceleration_ext.transpose();
-
+        // modify acceleration first to fix certain points 
+        for (size_t i = 0; i < X.rows(); i++)
+        {
+            if (dirichlet_bc_mask[i])
+            {
+                Eigen::Vector3d vec = Eigen::Vector3d::Zero();
+                acceleration.row(i) = vec;
+            }
+        }
         // -----------------------------------------------
         // (HW Optional)
         if (enable_sphere_collision) {
             acceleration += acceleration_collision;
         }
         // -----------------------------------------------
-
-        // (HW TODO): Implement semi-implicit Euler time integration
-
-        // Update X and vel 
-        
+        vel += h * acceleration;
+        X += h * vel;
+        vel *= damping;
     }
     else {
         std::cerr << "Unknown time integrator!" << std::endl;
@@ -105,10 +157,13 @@ Eigen::MatrixXd MassSpring::computeGrad(double stiffness)
     Eigen::MatrixXd g = Eigen::MatrixXd::Zero(X.rows(), X.cols());
     unsigned i = 0;
     for (const auto& e : E) {
-        // --------------------------------------------------
-        // (HW TODO): Implement the gradient computation
-        
-        // --------------------------------------------------
+        auto diff = X.row(e.first) - X.row(e.second);
+        auto l = E_rest_length[i];
+        double length = diff.norm();
+        double scale = stiffness * (length - l) / length;
+        auto vec = scale * diff;
+        g.row(e.first) += vec;
+        g.row(e.second) -= vec;
         i++;
     }
     return g;
@@ -123,16 +178,70 @@ Eigen::SparseMatrix<double> MassSpring::computeHessianSparse(double stiffness)
     auto k = stiffness;
     const auto I = Eigen::MatrixXd::Identity(3, 3);
     for (const auto& e : E) {
-        // --------------------------------------------------
-        // (HW TODO): Implement the sparse version Hessian computation
-        // Remember to consider fixed points 
-        // You can also consider positive definiteness here
-       
-        // --------------------------------------------------
-
+        // the hessians of e.first and e.second are both obtained from
+        // the hessian of e
+        MatrixXd Hessian_e = Eigen::MatrixXd::Zero(3, 3);
+        Eigen::Vector3d diff = X.row(e.first) - X.row(e.second);
+        auto l = E_rest_length[i];
+        double length = diff.norm();
+        Hessian_e += stiffness * diff * diff.transpose() / length / length;
+        if (length >= l)
+        {
+            Hessian_e += stiffness * (1 - l / length) * (I - diff * diff.transpose() / length / length);
+        }
+        // then we update H
+        for (size_t i = 3 * e.first; i < 3 * e.first + 3; i++)
+        {
+            for (size_t j = 3 * e.first; j < 3 * e.first + 3; j++)
+            {
+                double val = Hessian_e.coeff(i - 3 * e.first, j - 3 * e.first);
+                H.coeffRef(i, j) += val;
+            } 
+        }
+        for (size_t i = 3 * e.second; i < 3 * e.second + 3; i++)
+        {
+            for (size_t j = 3 * e.second; j < 3 * e.second + 3; j++)
+            {
+                double val = Hessian_e.coeff(i - 3 * e.second, j - 3 * e.second);
+                H.coeffRef(i, j) += val;
+            } 
+        }
+        for (size_t i = 3 * e.first; i < 3 * e.first + 3; i++)
+        {
+            for (size_t j = 3 * e.second; j < 3 * e.second + 3; j++)
+            {
+                double val = Hessian_e.coeff(i - 3 * e.first, j - 3 * e.second);
+                H.coeffRef(i, j) -= val;
+            } 
+        }
+        for (size_t i = 3 * e.second; i < 3 * e.second + 3; i++)
+        {
+            for (size_t j = 3 * e.first; j < 3 * e.first + 3; j++)
+            {
+                double val = Hessian_e.coeff(i - 3 * e.second, j - 3 * e.first);
+                H.coeffRef(i, j) -= val;
+            } 
+        }
         i++;
     }
+    // fix points
+    for (int i = 0; i < n_vertices; i++)
+    {
+        if (dirichlet_bc_mask[i])
+        {
+            for (size_t a = 0; a < 3; a++)
+            {
+                for (size_t b = 0; b < 3; b++)
+                {
+                    H.coeffRef(3 * i + a, 3 * i + b) = I.coeff(a, b);
+                }
+                
+            }
+        }
+    }
     
+
+    // try the simplest way to make it positive definite
     H.makeCompressed();
     return H;
 }
