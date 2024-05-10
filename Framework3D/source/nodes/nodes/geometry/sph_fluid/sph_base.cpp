@@ -111,7 +111,7 @@ void SPHBase::compute_non_pressure_acceleration()
         for (auto& q : p->neighbors()) {
         
         // Prompt: use the "compute_viscosity_acceleration" function to compute the viscosity acceleration between p and q"
-        p -> acceleration_ += compute_viscosity_acceleration(p, q) / (ps_.density0());
+        p -> acceleration_ += compute_viscosity_acceleration(p, q);
         }
         p -> acceleration_ += gravity_;
     }
