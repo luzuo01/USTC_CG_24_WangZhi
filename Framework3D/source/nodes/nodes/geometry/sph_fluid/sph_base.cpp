@@ -4,7 +4,7 @@
 #include <omp.h>
 #include <iostream>
 #include "colormap_jet.h"
-
+#include <omp.h>
 namespace USTC_CG::node_sph_fluid {
 using namespace Eigen;
 using Real = double;
@@ -77,7 +77,9 @@ void SPHBase::compute_density()
 {
     // (HW TODO) Traverse all particles to compute each particle's density
     // (Optional) This operation can be done in parallel using OpenMP 
-    for (auto& p : ps_.particles()) {
+    #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
         p -> density_ = 0.0;
         // ... necessary initialization of particle p's density here  
         p -> density_ += ps_.mass() * W_zero(ps_.h());
@@ -100,14 +102,16 @@ void SPHBase::compute_pressure()
 void SPHBase::compute_non_pressure_acceleration()
 {
     // (HW TODO) Traverse all particles to compute each particle's non-pressure acceleration 
-    for (auto& p : ps_.particles()) {
+    #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
         p -> acceleration_.setZero();
         // necessary code here to compute particle p's acceleration include gravity and viscosity
         // We do not consider surface tension in this assignment, but you can add it if you like
         for (auto& q : p->neighbors()) {
         
         // Prompt: use the "compute_viscosity_acceleration" function to compute the viscosity acceleration between p and q"
-        p -> acceleration_ += compute_viscosity_acceleration(p, q) / (p -> density());
+        p -> acceleration_ += compute_viscosity_acceleration(p, q) / (ps_.density0());
         }
         p -> acceleration_ += gravity_;
     }
@@ -129,7 +133,9 @@ Vector3d SPHBase::compute_viscosity_acceleration(
 // Traverse all particles and compute pressure gradient acceleration
 void SPHBase::compute_pressure_gradient_acceleration()
 {
-    for (auto& p : ps_.particles()) {
+    #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
         // (HW TODO) Traverse all particles and compute each particle's acceleration from pressure gradient force
         p -> acceleration_.setZero();
         for (auto& q : p->neighbors()) {
@@ -147,8 +153,9 @@ void SPHBase::step()
 
 void SPHBase::advect()
 {
-    for (auto& p : ps_.particles())  
-    {
+   #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
 
         // ---------------------------------------------------------
         // (HW TODO) Implement the advection step of each particle

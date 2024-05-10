@@ -1,5 +1,6 @@
 #include "wcsph.h"
 #include <iostream>
+#include <omp.h>
 using namespace Eigen;
 
 namespace USTC_CG::node_sph_fluid {
@@ -15,7 +16,9 @@ void WCSPH::compute_density()
 	// (HW TODO) Implement the density computation
     // You can also compute pressure in this function 
 	// -------------------------------------------------------------
-    for (auto& p : ps_.particles()) {
+    #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
         p -> density_ = 0.0;
         // ... necessary initialization of particle p's density here  
         p -> density_ += ps_.mass() * W_zero(ps_.h());
@@ -28,7 +31,8 @@ void WCSPH::compute_density()
 
         }
         // compute its pressure
-        p -> pressure_ = stiffness_ * (pow(p -> density() / ps_.density0(), exponent_) - 1); 
+        double pressure = stiffness_ * (pow(p -> density() / ps_.density0(), exponent_) - 1); 
+        p -> pressure_ = std::max(pressure, 0.0);
     }
 }
 
@@ -46,7 +50,9 @@ void WCSPH::step()
     compute_density();
     compute_non_pressure_acceleration();
     // update the non-pressure part
-    for (auto& p : ps_.particles()) {
+    #pragma omp parallel for
+    for (int i = 0; i < ps_.particles().size(); i++) {
+        auto& p = ps_.particles()[i];
         p -> vel_ += p -> acceleration() * dt_;
     }
     compute_pressure_gradient_acceleration();
