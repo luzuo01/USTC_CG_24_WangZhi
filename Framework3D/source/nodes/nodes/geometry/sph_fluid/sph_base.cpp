@@ -78,13 +78,15 @@ void SPHBase::compute_density()
     // (HW TODO) Traverse all particles to compute each particle's density
     // (Optional) This operation can be done in parallel using OpenMP 
     for (auto& p : ps_.particles()) {
-
+        p -> density_ = 0.0;
         // ... necessary initialization of particle p's density here  
-
+        p -> density_ += ps_.mass() * W_zero(ps_.h());
         // Then traverse all neighbor fluid particles of p
         for (auto& q : p->neighbors()) {
 
             // ... compute the density contribution from q to p
+            double w_pq = W(p -> x() - q -> x(), ps_.h());
+            p -> density_ += w_pq * ps_.mass();
 
         }
     }
@@ -99,17 +101,15 @@ void SPHBase::compute_non_pressure_acceleration()
 {
     // (HW TODO) Traverse all particles to compute each particle's non-pressure acceleration 
     for (auto& p : ps_.particles()) {
-
+        p -> acceleration_.setZero();
         // necessary code here to compute particle p's acceleration include gravity and viscosity
         // We do not consider surface tension in this assignment, but you can add it if you like
-
-        //for (auto& q : p->neighbors()) {
-        // 
+        for (auto& q : p->neighbors()) {
+        
         // Prompt: use the "compute_viscosity_acceleration" function to compute the viscosity acceleration between p and q"
-        // 
-        //}
-
-
+        p -> acceleration_ += compute_viscosity_acceleration(p, q) / (p -> density());
+        }
+        p -> acceleration_ += gravity_;
     }
 }
 
@@ -122,11 +122,8 @@ Vector3d SPHBase::compute_viscosity_acceleration(
     auto x_ij = p->x() - q->x();
     Vector3d grad = grad_W(p->x() - q->x(), ps_.h());
 
-    // Vector3d laplace_v = ... 
-
-    //return this->viscosity_ * laplace_v;
-
-    return Vector3d::Zero();
+    Vector3d laplace_v = 10 * ps_.mass() / (q -> density()) * (v_ij.dot(x_ij)) / (x_ij.norm() * x_ij.norm() + 0.01 * ps_.h() * ps_.h()) * grad;
+    return this->viscosity_ * laplace_v;
 }
 
 // Traverse all particles and compute pressure gradient acceleration
@@ -134,6 +131,11 @@ void SPHBase::compute_pressure_gradient_acceleration()
 {
     for (auto& p : ps_.particles()) {
         // (HW TODO) Traverse all particles and compute each particle's acceleration from pressure gradient force
+        p -> acceleration_.setZero();
+        for (auto& q : p->neighbors()) {
+            Vector3d grad = grad_W(p->x() - q->x(), ps_.h());
+            p -> acceleration_ -= ps_.mass() * ((p -> pressure()) / (p -> density() * p -> density()) + (q -> pressure()) / (q -> density() * q -> density())) * grad;
+        }
     }
 }
 
@@ -153,7 +155,9 @@ void SPHBase::advect()
         // Remember to check collision after advection
 
         // Your code here 
-
+        p -> vel_ += p -> acceleration() * dt_;
+        p -> X_ += dt_ * p -> vel();
+        check_collision(p);
         // ---------------------------------------------------------
         vel_.row(p->idx()) = p->vel().transpose();
         X_.row(p->idx()) = p->x().transpose();
