@@ -13,7 +13,11 @@ Joint::Joint(int idx, string name, int parent_idx, const GfMatrix4f& bind_transf
 void Joint::compute_world_transform()
 {
     // ---------- (HW TODO) Compute world space trasform of this joint -----------------
-
+    if (parent_) {
+        this->world_transform_ = this->local_transform_ * this->parent_->world_transform_;
+    } else {
+        this->world_transform_ = this->local_transform_;
+    }
     // --------------------------------------------------------------------------------
 }
 
@@ -22,6 +26,11 @@ void JointTree::compute_world_transforms_for_each_joint()
     // ----------- (HW_TODO) Traverse all joint and compute its world space transform ---
 	// Call compute_world_transform for each joint
     // ---------------------------------------------
+    
+    for (auto jt : joints_)
+    {
+        jt->compute_world_transform();
+    }
 }
 
 void JointTree::add_joint(int idx, std::string name, int parent_idx, const GfMatrix4f& bind_transform)
@@ -59,6 +68,10 @@ void JointTree::print()
 	}
 }
 
+int JointTree::get_num_joints() 
+{
+    return joints_.size();
+}
 
 Animator::Animator(const shared_ptr<MeshComponent> mesh, const shared_ptr<SkelComponent> skel) 
 	: mesh_(mesh),
@@ -94,6 +107,28 @@ void Animator::update_mesh_vertices()
 	// 2. For each vertex, compute the new position by transforming the rest position with the joint transforms
 	// 2. Update the vertex position in the mesh
 	// --------------------------------------------------------------------------------
+    auto jt_indices = this->skel_->jointIndices;
+    auto jt_weights = this->skel_->jointWeight;
+    int num_mesh_vertices = this->mesh_->vertices.size();
+    int num_neighbors = jt_indices.size() / num_mesh_vertices;
+    for (size_t i = 0; i < num_mesh_vertices; i++)
+    {
+        pxr::GfVec3f x_pre = mesh_->vertices[i];
+        pxr::GfVec3f x_after(0.0);
+        pxr::GfMatrix4f trans(0.0);
+        for (size_t j = 0; j < num_neighbors; j++)
+        {
+            int idx = jt_indices[i * num_neighbors + j];
+            float weight = jt_weights[i * num_neighbors + j];
+
+            x_after += weight * joint_tree_.get_joint(idx)->get_world_transform().Transform(
+                joint_tree_.get_joint(idx)->get_bind_transform().GetInverse().Transform(x_pre)
+            );
+        }
+        // trans = trans.GetTranspose();
+        // x_after = trans.Transform(x_pre);
+        mesh_->vertices[i] = x_after;
+    }
 }
 
 }  // namespace USTC_CG::node_character_animation

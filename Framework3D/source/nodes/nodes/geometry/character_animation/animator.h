@@ -61,6 +61,8 @@ class JointTree
 
 	void print(); 
 
+	int get_num_joints();
+
 protected: 
     shared_ptr<Joint> root_;
 
