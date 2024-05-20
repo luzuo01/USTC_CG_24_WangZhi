@@ -115,7 +115,7 @@ void Animator::update_mesh_vertices()
     {
         pxr::GfVec3f x_pre = mesh_->vertices[i];
         pxr::GfVec3f x_after(0.0);
-        pxr::GfMatrix4f trans(0.0);
+        // pxr::GfMatrix4f trans(0.0);
         for (size_t j = 0; j < num_neighbors; j++)
         {
             int idx = jt_indices[i * num_neighbors + j];
