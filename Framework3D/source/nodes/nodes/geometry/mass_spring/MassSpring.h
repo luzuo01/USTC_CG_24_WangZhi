@@ -5,6 +5,10 @@
 #include "utils.h"
 #include <chrono>
 #include <cassert>
+#include <OpenMesh/Core/IO/MeshIO.hh>
+#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
+#include <vector>
+#include <iostream>
 
 #define TIC(name) auto start_##name = std::chrono::high_resolution_clock::now(); 
 #define TOC(name) \
@@ -14,9 +18,10 @@
 
 namespace USTC_CG::node_mass_spring {
 
+typedef OpenMesh::PolyMesh_ArrayKernelT<> SpringMesh;
 using namespace Eigen;
 using Edge = std::pair<int, int>;
-using EdgeSet = std::set<Edge>;
+using EdgeList = std::vector<Edge>;
 using MatrixXd = Eigen::MatrixXd;
 using SparseMatrix_d = Eigen::SparseMatrix<double>;
 using Trip_d = Eigen::Triplet<double>;
@@ -30,9 +35,12 @@ class MassSpring {
     enum TimeIntegrator { IMPLICIT_EULER = 0, SEMI_IMPLICIT_EULER = 1 };
 
     MassSpring(const Eigen::MatrixXd &X, const EdgeSet &E);
+    MassSpring(const Eigen::MatrixXd &X, const EdgeSet &E, Eigen::MatrixXi F);
 
     virtual void step();
     void reset();
+
+    void dihedralConstraint(double mass_per_vertex);
 
     // energy related function
     virtual double computeEnergy(double stiffness);
@@ -61,13 +69,13 @@ class MassSpring {
                                       const std::vector<bool>& control_mask);
 
     // Simulation parameters
-    double stiffness = 10.0;
+    double stiffness = 100.0;
     double damping = 0.995;
     enum TimeIntegrator time_integrator = IMPLICIT_EULER;
     double mass = 1.0;  // total mass of the mesh
     double h = 1e-2;    // time step
     Eigen::Vector3d gravity = { 0, 0, -9.8 };
-    Eigen::Vector3d wind_ext_acc = { 4.5, -6.5, 1.0}; // (HW TODO) feel free to change the wind acceleration
+    Eigen::Vector3d wind_ext_acc = { 0, 0, 0}; // (HW TODO) feel free to change the wind acceleration
 
     // (HW Optional) sphere collision parameters
     double collision_penalty_k = 10000.0;
@@ -88,6 +96,8 @@ class MassSpring {
     Eigen::MatrixXd X;
     Eigen::MatrixXd vel;
     EdgeSet E;
+    Eigen::MatrixXi F;
+    SpringMesh MyMesh;
     std::vector<double> E_rest_length;
     std::vector<bool>
         dirichlet_bc_mask;  // mask for marking fixed points (Dirichlet boundary condition)

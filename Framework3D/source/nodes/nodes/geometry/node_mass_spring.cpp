@@ -81,14 +81,16 @@ static void node_mass_spring_exec(ExeParams params)
             auto vertices = usd_vertices_to_eigen(mesh->vertices);
             const float k = params.get_input<float>("stiffness");
             const float h = params.get_input<float>("h");
+            auto F = usd_faces_to_eigen(mesh->faceVertexCounts, mesh->faceVertexIndices);
+
 
             bool enable_liu13 =  params.get_input<int>("enable Liu13") == 1 ? true : false;
-            if (enable_liu13) { 
-                // HW Optional 
-				mass_spring = std::make_shared<FastMassSpring>(vertices, edges, k, h);
-			}
-			else
-				mass_spring = std::make_shared<MassSpring>(vertices, edges);
+            if (enable_liu13) {
+                // HW Optional
+                mass_spring = std::make_shared<FastMassSpring>(vertices, edges, k, h);
+            }
+            else
+                mass_spring = std::make_shared<MassSpring>(vertices, edges, F);
 
             // simulation parameters
             mass_spring->stiffness = k;
